@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Baap Er Bank</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <header class="container mx-auto">
+      <h1 class="text-2xl text-blue-600 font-bold text-center mt-10">
+        Lets Get Some Mooney
+      </h1>
+    </header>
+    <main class="max-w-3xl mx-auto my-10 rounded space-y-10 px-2">
+      <section>
+        <div class="grid md:grid-cols-3 sm:grid-cols-2 gap-4 text-white">
+          <div class="bg-green-500 p-5 space-y-2 rounded-xl">
+            <h4 class="text-2xl">Deposit</h4>
+            <h2 class="text-3xl">$ <span id="deposit">00</span></h2>
+          </div>
+          <div class="bg-yellow-500 p-5 space-y-2 rounded-xl">
+            <h4 class="text-2xl">Withdraw</h4>
+            <h2 class="text-3xl">$ <span id="withdraw">00</span></h2>
+          </div>
+          <div class="bg-violet-500 p-5 space-y-2 rounded-xl">
+            <h4 class="text-2xl">Balance</h4>
+            <h2 class="text-3xl">$ <span id="balance">1000</span></h2>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="grid sm:grid-cols-2 gap-4 text-white">
+          <div class="bg-rose-500 p-5 space-y-3 rounded-xl relative">
+            <h4 class="text-2xl">Please Deposit</h4>
+            <input
+              type="number"
+              id="depositInput"
+              class="text-xl rounded p-4 w-full text-rose-500"
+            />
+            <p
+              class="hidden bg-rose-500 text-xs text-white p-1 rounded"
+              id="depositError"
+            ></p>
+            <input
+              type="button"
+              value="Deposit"
+              id="depositButton"
+              class="p-2 w-full bg-rose-600 font-semibold rounded text-white hover:bg-rose-700 duration-300"
+            />
+          </div>
+          <div class="bg-yellow-500 p-5 space-y-3 rounded-xl relative">
+            <h4 class="text-2xl">Please Withdraw</h4>
+            <input
+              type="number"
+              id="withdrawInput"
+              class="text-xl rounded p-4 w-full text-yellow-500"
+            />
+            <p
+              class="hidden bg-rose-500 text-xs text-white p-1 rounded"
+              id="withdrawError"
+            ></p>
+            <input
+              type="button"
+              value="Withdraw"
+              id="withdrawButton"
+              class="p-2 w-full bg-yellow-600 font-semibold rounded text-white hover:bg-yellow-700 duration-300"
+            />
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="./bank.js"></script>
+  </body>
+</html>
